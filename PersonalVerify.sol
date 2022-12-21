@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract ECRecover {
+contract PersonalVerify {
     /*
      * @param _message = hello world
      * @param _signature = 0x4867486e8ab6e37a9734eb84134754148a9e70e2f61121a1517345d326795b5a40c9fa5516b1c20c8d8c1cb9b982c6a210032591e689e4f5b97d2462b8bf9fa31c
