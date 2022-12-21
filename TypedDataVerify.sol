@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract VerifyTypedData {
     /*
-     * @param _hash = 123
+     * @param _message = 123
      * @param _signature = 0x5e9714b8b78cbf84bf8e53c5967b09a7f8ee895367c0b427859ab520a79702667c8b94e6a320f88977908924bd4b57e94c52efed90e2a2c5cee601e3117e84281b
      * @return 0xdD4c825203f97984e7867F11eeCc813A036089D1
      */
