@@ -12,7 +12,7 @@ async function signTypedData() {
       // Defining the chain aka Rinkeby testnet or Ethereum Main Net
       chainId: 1,
       // If name isn't enough add verifying contract to make sure you are establishing contracts with the proper entity
-      verifyingContract: "0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC",
+      verifyingContract: "0x0000000000000000000000000000000000000000",
     },
 
     // Defining the message signing data content.

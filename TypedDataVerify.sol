@@ -8,7 +8,7 @@ contract VerifyTypedData {
     string  public constant name = "MyName";
     string  public constant version = "1";
     uint256 public constant chainId = 1;
-    address public verifyingContract = 0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC; // address(this);
+    address public verifyingContract = 0x0000000000000000000000000000000000000000; // address(this);
 
     // message type
     struct Message {
@@ -29,6 +29,11 @@ contract VerifyTypedData {
             verifyingContract)
     );
 
+    /*
+    * @param _message = 123
+    * @param _signature = 0x5e9714b8b78cbf84bf8e53c5967b09a7f8ee895367c0b427859ab520a79702667c8b94e6a320f88977908924bd4b57e94c52efed90e2a2c5cee601e3117e84281b
+    * @return 0xdD4c825203f97984e7867F11eeCc813A036089D1
+    */
     function verifyTypedData(uint256 _message, bytes memory _signature) public view returns (address) {
         bytes32 hash = keccak256(abi.encodePacked(
             "\x19\x01",
@@ -42,11 +47,11 @@ contract VerifyTypedData {
     }
 
     /*
-    * @param _hash = 0x47173285a8d7341e5e972fc677286384f802f8ef42a5ec5f03bbfa254cb01fad
-    * @param _signature = 0x4867486e8ab6e37a9734eb84134754148a9e70e2f61121a1517345d326795b5a40c9fa5516b1c20c8d8c1cb9b982c6a210032591e689e4f5b97d2462b8bf9fa31c
+    * @param _hash = 0x4ad89a5df51e169895dfefd22dd2563326649cf819f6727a439fe51cde67b056
+    * @param _signature = 0x5e9714b8b78cbf84bf8e53c5967b09a7f8ee895367c0b427859ab520a79702667c8b94e6a320f88977908924bd4b57e94c52efed90e2a2c5cee601e3117e84281b
     * @return 0xdD4c825203f97984e7867F11eeCc813A036089D1
     */
-    function getSigner(bytes32 _hash, bytes memory _signature) private pure returns (address) {
+    function getSigner(bytes32 _hash, bytes memory _signature) public pure returns (address) {
       bytes32 r;
       bytes32 s;
       uint8 v;
